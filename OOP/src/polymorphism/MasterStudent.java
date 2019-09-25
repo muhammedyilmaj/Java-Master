@@ -2,8 +2,8 @@ package polymorphism;
 
 public class MasterStudent extends Student{
 
-    public MasterStudent(final int studentNumber, final String studentName, final String schoolName) {
-        super(studentNumber, studentName, schoolName);
+    public MasterStudent(final int studentNumber, final String studentName, final String schoolName, String departmentType) {
+        super(studentNumber, studentName, schoolName, "master");
     }
 
     @Override

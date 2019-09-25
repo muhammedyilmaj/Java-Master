@@ -3,8 +3,8 @@ package polymorphism;
 public class BachelorDegreeStudent extends Student {
 
 
-    public BachelorDegreeStudent( int studentNumber,  String studentName,  String schoolName) {
-        super(studentNumber, studentName, schoolName);
+    public BachelorDegreeStudent( int studentNumber,  String studentName,  String schoolName,  String departmentType) {
+        super(studentNumber, studentName, schoolName, "bachelor");
     }
 
     @Override

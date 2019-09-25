@@ -7,13 +7,16 @@ public class Student {
     private String schoolName;
     private String projectTopic;
     private  String lecturerName;
+    private String departmentType;
     private final String role = "student";
 
     public String getRole() {
         return role;
     }
 
-    public Student(final int studentNumber, final String studentName, final String schoolName) {
+    public Student(int studentNumber,  String studentName, String schoolName, String departmentType) {
+
+        this.departmentType= departmentType;
         this.studentNumber = studentNumber;
         this.studentName = studentName;
         this.schoolName = schoolName;
@@ -50,6 +53,10 @@ public class Student {
 
     }
 
+    public String getDepartmentType() {
+        return departmentType;
+    }
+
     public void selectLecturerName(String name, boolean permission, String role) {
             setLecturerName(name);
 
@@ -57,4 +64,5 @@ public class Student {
 
     public void selectProjectTopic(String projectTopic, boolean permission, String role) {
             setProjectTopic(projectTopic);}
+
 }
