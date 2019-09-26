@@ -1,6 +1,6 @@
 package polymorphism;
 
-public class Student {
+public abstract class Student {
 
     private int    studentNumber;
     private String studentName;
@@ -8,7 +8,7 @@ public class Student {
     private String projectTopic;
     private  String lecturerName;
     private String departmentType;
-    private final String role = "student";
+    private static final String role = "student";
 
     public String getRole() {
         return role;
@@ -57,12 +57,12 @@ public class Student {
         return departmentType;
     }
 
-    public void selectLecturerName(String name, boolean permission, String role) {
+    public void selectLecturerName(String name, String role) {
             setLecturerName(name);
 
     }
 
-    public void selectProjectTopic(String projectTopic, boolean permission, String role) {
+    public void selectProjectTopic(String projectTopic, String role) {
             setProjectTopic(projectTopic);}
 
 }

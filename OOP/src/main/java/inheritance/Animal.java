@@ -1,6 +1,9 @@
 package inheritance;
+import org.apache.log4j.Logger;
 
 public class Animal {
+    private static final Logger LOGGER = Logger.getLogger(Animal.class);
+
     private String name;
     private int brain;
     private int size;
@@ -15,13 +18,13 @@ public class Animal {
         this.body = body;
     }
     public void eat(){
-        System.out.println("Animal is eating");
+        LOGGER.info("Animal is eating");
     }
 
 
     public void move(int speed) {
 
-        System.out.println("Animal's speed is" + speed);
+        LOGGER.info("Animal's speed is" + speed);
     }
 
     public String getName() {

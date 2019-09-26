@@ -1,8 +1,11 @@
 package abstraction;
 import java.util.HashMap;
 import java.util.Map;
+import org.apache.log4j.Logger;
 
 public class VizjaUniversity implements University{
+    private static final Logger LOGGER = Logger.getLogger(VizjaUniversity.class);
+
     private Map<Integer ,Student> students;
 
     public VizjaUniversity(){
@@ -15,34 +18,36 @@ public class VizjaUniversity implements University{
             students.put(student.getStudentId(),student);
             student.setUniversity("Vizja");
             student.setStatus("active");
-            System.out.println("registered" + student.getStudentName());
+            LOGGER.info("registered" + student.getStudentName());
         }
 
         catch (Exception E){
-            System.out.println("cancel registeration  student=>" + student.getStudentName());
+            LOGGER.info("cancel registeration  student=>" + student.getStudentName());
         }
     }
 
     @Override
     public void cancelAgreement(int studentId) {
-        try{
+
         if (students.containsKey(studentId)) {
+            try{
             students.remove(studentId);
             students.get(studentId).setStatus("inactive");
             students.get(studentId).setUniversity("");
+        } catch (NullPointerException E){
+            LOGGER.info("Student number is not belong to Vizja university=> " + studentId);
         }
-        else
-        throw new NullPointerException("new null");}
-        catch (NullPointerException E){
-            System.out.println("Student number is not belong to Vizja university=> " + studentId);
-        }
+    }
     }
 
     @Override
     public void freezeStudentMemberShip(final int studentId) {
-        try {
+
         if (students.containsKey(studentId)) {
-            students.get(studentId).setStatus("inactive");}}
-        catch (NullPointerException E){
-            System.out.println("Student number is not belong to Vizja university=> " + studentId); }}
+            try {
+            students.get(studentId).setStatus("inactive");
+            }catch (NullPointerException E){
+                LOGGER.info("Student number is not belong to Vizja university=> " + studentId); }}
+
+}
 }

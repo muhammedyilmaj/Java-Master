@@ -1,6 +1,9 @@
 package encapsulation;
 
+import org.apache.log4j.Logger;
+
 public class Player {
+    private static final Logger LOGGER = Logger.getLogger(Player.class);
 
     private String playerName;
     private int health=100;
@@ -22,7 +25,7 @@ public class Player {
     public void loseHealth(int damage){
         this.health-=damage;
         if(this.health<0 || this.health>100){
-            System.out.println("player knock down");
+            LOGGER.info("player knock down");
             this.health=0;
         }
     }

@@ -1,6 +1,6 @@
 package abstraction;
 
-public class Student {
+public abstract class Student {
     private int studentId;
     private String studentName;
     private String phoneNumber;
@@ -12,6 +12,7 @@ public class Student {
         this.studentName = studentName;
         this.phoneNumber = phoneNumber;
     }
+    public abstract void applyForUniversity( University university);
 
     public int getStudentId() {
         return studentId;

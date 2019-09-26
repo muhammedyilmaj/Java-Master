@@ -5,7 +5,7 @@ import java.util.Set;
 public class Teacher {
     private String name;
     private String level;
-    private final String role= "teacher";
+    private static final String role= "teacher";
     private Set<Student> students;
 
     public Teacher(final String name, final String level) {

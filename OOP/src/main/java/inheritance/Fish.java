@@ -1,7 +1,8 @@
 package inheritance;
+import org.apache.log4j.Logger;
 
 public class Fish extends Animal {
-
+private static final Logger LOGGER= Logger.getLogger(Fish.class);
     private int eyes;
     private int fins;
     private int gills;
@@ -15,12 +16,12 @@ public class Fish extends Animal {
 
     @Override
     public void eat() {
-        System.out.println("fish eat worm");
+        LOGGER.info("fish eat worm");
         super.eat();
     }
 
     public void swim(int speed) {
-        System.out.println("fish swim "+ speed + " m/s speed");
+        LOGGER.info("fish swim "+ speed + " m/s speed");
     }
 
     public int getEyes() {

@@ -2,8 +2,11 @@ package abstraction;
 
 import java.util.HashMap;
 import java.util.Map;
+import org.apache.log4j.Logger;
 
 public class LazarskiUniveristy implements University{
+    private static final Logger LOGGER = Logger.getLogger(LazarskiUniveristy.class);
+
     private Map<Integer ,Student> students;
 
     public LazarskiUniveristy(){
@@ -16,11 +19,11 @@ public class LazarskiUniveristy implements University{
             students.put(student.getStudentId(),student);
             student.setUniversity("Lazarski");
             student.setStatus("active");
-            System.out.println("registered" + student.getStudentName());
+            LOGGER.info("registered" + student.getStudentName());
         }
 
         catch (Exception E){
-            System.out.println("cancel registeration  student=>" + student.getStudentName());
+            LOGGER.info("cancel registeration  student=>" + student.getStudentName());
         }
     }
 
@@ -35,7 +38,7 @@ public class LazarskiUniveristy implements University{
             else
                 throw new NullPointerException("Strudent dont belong to Lazarski");}
         catch (NullPointerException E){
-            System.out.println("Student number is not belong to Lazarski university=> " + studentId);
+            LOGGER.info("Student number is not belong to Lazarski university=> " + studentId);
         }
     }
 
@@ -45,5 +48,5 @@ public class LazarskiUniveristy implements University{
             if (students.containsKey(studentId)) {
                 students.get(studentId).setStatus("inactive");}}
         catch (NullPointerException E){
-            System.out.println("Student number is not belong to Lazarski university=> " + studentId); }}
+            LOGGER.info("Student number is not belong to Lazarski university=> " + studentId); }}
 }
