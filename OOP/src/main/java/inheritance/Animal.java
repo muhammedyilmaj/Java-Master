@@ -10,60 +10,60 @@ public class Animal {
     private int weight;
     private int body;
 
-    public Animal(final String name, final int brain, final int size, final int weight, final int body) {
+    protected Animal(final String name, final int brain, final int size, final int weight, final int body) {
         this.name = name;
         this.brain = brain;
         this.size = size;
         this.weight = weight;
         this.body = body;
     }
-    public void eat(){
+    protected void eat(){
         LOGGER.info("Animal is eating");
     }
 
 
-    public void move(int speed) {
+    protected void move(int speed) {
 
         LOGGER.info("Animal's speed is" + speed);
     }
 
-    public String getName() {
+    protected String getName() {
         return name;
     }
 
-    public void setName(final String name) {
+    protected void setName(final String name) {
         this.name = name;
     }
 
-    public int getBrain() {
+    protected int getBrain() {
         return brain;
     }
 
-    public void setBrain(final int brain) {
+    protected void setBrain(final int brain) {
         this.brain = brain;
     }
 
-    public int getSize() {
+    protected int getSize() {
         return size;
     }
 
-    public void setSize(final int size) {
+    protected void setSize(final int size) {
         this.size = size;
     }
 
-    public int getWeight() {
+    protected int getWeight() {
         return weight;
     }
 
-    public void setWeight(final int weight) {
+    protected void setWeight(final int weight) {
         this.weight = weight;
     }
 
-    public int getBody() {
+    protected int getBody() {
         return body;
     }
 
-    public void setBody(final int body) {
+    protected void setBody(final int body) {
         this.body = body;
     }
 }

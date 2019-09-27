@@ -7,7 +7,7 @@ private static final Logger LOGGER= Logger.getLogger(Fish.class);
     private int fins;
     private int gills;
 
-    public Fish(String name, int size, int weight, int eyes, int fins, int gills) {
+    protected Fish(String name, int size, int weight, int eyes, int fins, int gills) {
         super(name, 1, size, weight, 1);
         this.eyes=eyes;
         this.fins=fins;
@@ -15,36 +15,36 @@ private static final Logger LOGGER= Logger.getLogger(Fish.class);
     }
 
     @Override
-    public void eat() {
+    protected void eat() {
         LOGGER.info("fish eat worm");
         super.eat();
     }
 
-    public void swim(int speed) {
+    protected void swim(int speed) {
         LOGGER.info("fish swim "+ speed + " m/s speed");
     }
 
-    public int getEyes() {
+    protected int getEyes() {
         return eyes;
     }
 
-    public void setEyes(final int eyes) {
+    protected void setEyes(final int eyes) {
         this.eyes = eyes;
     }
 
-    public int getFins() {
+    protected int getFins() {
         return fins;
     }
 
-    public void setFins(final int fins) {
+    protected void setFins(final int fins) {
         this.fins = fins;
     }
 
-    public int getGills() {
+    protected int getGills() {
         return gills;
     }
 
-    public void setGills(final int gills) {
+    protected void setGills(final int gills) {
         this.gills = gills;
     }
 }

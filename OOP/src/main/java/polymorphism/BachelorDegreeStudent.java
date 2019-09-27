@@ -5,14 +5,14 @@ public class BachelorDegreeStudent extends Student {
     private static final Logger LOGGER = Logger.getLogger(BachelorDegreeStudent.class);
 
 
-    public BachelorDegreeStudent( int studentNumber,  String studentName,  String schoolName) {
+    protected BachelorDegreeStudent( int studentNumber,  String studentName,  String schoolName) {
         super(studentNumber, studentName, schoolName, "bachelor");
     }
 
     @Override
-    public void selectLecturerName( String name, String role) {
-        if ( role.equals("teacher")) {
-            super.selectLecturerName(name, role);
+    protected void selectLecturerName( String name) {
+        if ( this.getRole().equals("teacher")) {
+            super.selectLecturerName(name);
             LOGGER.info("Finish project lecturer selected");
         }
         else
@@ -20,9 +20,9 @@ public class BachelorDegreeStudent extends Student {
     }
 
     @Override
-    public void selectProjectTopic( String projectTopic,  String role) {
-        if (role.equals("teacher")) {
-            super.selectProjectTopic(projectTopic,role);
+    protected void selectProjectTopic( String projectTopic) {
+        if (this.getRole().equals("teacher")) {
+            super.selectProjectTopic(projectTopic);
             LOGGER.info("Finish projecttopic selected");}
         else
             LOGGER.info("Can't choose projecttopic");

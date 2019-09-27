@@ -8,13 +8,13 @@ public abstract class Student {
     private String projectTopic;
     private  String lecturerName;
     private String departmentType;
-    private static final String role = "student";
+    private static final String ROLE = "student";
 
-    public String getRole() {
-        return role;
+    protected String getRole() {
+        return ROLE;
     }
 
-    public Student(int studentNumber,  String studentName, String schoolName, String departmentType) {
+    protected Student(int studentNumber,  String studentName, String schoolName, String departmentType) {
 
         this.departmentType= departmentType;
         this.studentNumber = studentNumber;
@@ -22,23 +22,23 @@ public abstract class Student {
         this.schoolName = schoolName;
     }
 
-    public int getStudentNumber() {
+    protected int getStudentNumber() {
         return studentNumber;
     }
 
-    public String getStudentName() {
+    protected String getStudentName() {
         return studentName;
     }
 
-    public String getSchoolName() {
+    protected String getSchoolName() {
         return schoolName;
     }
 
-    public String getProjectTopic() {
+    protected String getProjectTopic() {
         return projectTopic;
     }
 
-    public String getLecturerName() {
+    protected String getLecturerName() {
         return lecturerName;
     }
 
@@ -53,16 +53,16 @@ public abstract class Student {
 
     }
 
-    public String getDepartmentType() {
+    protected String getDepartmentType() {
         return departmentType;
     }
 
-    public void selectLecturerName(String name, String role) {
+    protected void selectLecturerName(String name) {
             setLecturerName(name);
 
     }
 
-    public void selectProjectTopic(String projectTopic, String role) {
+    protected void selectProjectTopic(String projectTopic) {
             setProjectTopic(projectTopic);}
 
 }

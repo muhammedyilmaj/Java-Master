@@ -34,8 +34,8 @@ public class Main {
         masterTeacher.setStudents(masterStudent);
 
 
-        daniel.selectLecturerName("Vehbi", daniel.getRole());
-        bachelorTeacher.getStudents().stream().filter(s->s.getStudentName().equals("daniel")).findFirst().get().selectLecturerName("Zülfü Livaneli",bachelorTeacher.getRole());
+        daniel.selectLecturerName("Vehbi");
+        bachelorTeacher.getStudents().stream().filter(s->s.getStudentName().equals("daniel")).findFirst().get().selectLecturerName("Zülfü Livaneli");
 
 
     }

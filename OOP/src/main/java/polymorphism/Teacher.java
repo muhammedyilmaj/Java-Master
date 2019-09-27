@@ -5,35 +5,35 @@ import java.util.Set;
 public class Teacher {
     private String name;
     private String level;
-    private static final String role= "teacher";
+    private static final String ROLE= "teacher";
     private Set<Student> students;
 
-    public Teacher(final String name, final String level) {
+    protected Teacher(final String name, final String level) {
         this.name = name;
         this.level = level;
     }
 
-    public String getLevel() {
+    protected String getLevel() {
         return level;
     }
 
-    public String getRole() {
-        return role;
+    protected String getRole() {
+        return ROLE;
     }
 
-    public String getName() {
+    protected String getName() {
         return name;
     }
 
-    public String isLevel() {
+    protected String isLevel() {
         return level;
     }
 
-    public Set<Student> getStudents() {
+    protected Set<Student> getStudents() {
         return students;
     }
 
-    public void setStudents(final Set<Student> students) {
+    protected void setStudents(final Set<Student> students) {
         this.students = students;
     }
 }

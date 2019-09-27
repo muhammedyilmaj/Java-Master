@@ -9,7 +9,7 @@ public class LazarskiUniveristy implements University{
 
     private Map<Integer ,Student> students;
 
-    public LazarskiUniveristy(){
+    protected LazarskiUniveristy(){
         students= new HashMap<>();
     }
 

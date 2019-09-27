@@ -8,7 +8,7 @@ public class VizjaUniversity implements University{
 
     private Map<Integer ,Student> students;
 
-    public VizjaUniversity(){
+    protected VizjaUniversity(){
         students= new HashMap<>();
     }
 

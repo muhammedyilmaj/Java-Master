@@ -10,9 +10,9 @@ public class MasterStudent extends Student{
     }
 
     @Override
-    public void selectLecturerName( String name, String role) {
-        if (role.equals("teacher")) {
-            super.selectLecturerName(name, role);
+    protected void selectLecturerName( String name) {
+        if (this.getRole().equals("teacher")) {
+            super.selectLecturerName(name);
             LOGGER.info("Thesis lecturer selected");
         }
         else
@@ -21,9 +21,9 @@ public class MasterStudent extends Student{
 
 
     @Override
-    public void selectProjectTopic( String projectTopic, String role) {
-        if (role.equals("teacher")) {
-            super.selectProjectTopic(projectTopic, role);
+    protected void selectProjectTopic( String projectTopic) {
+        if (this.getRole().equals("teacher")) {
+            super.selectProjectTopic(projectTopic);
             LOGGER.info("thesis topic selected");
         }
         else

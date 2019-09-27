@@ -9,7 +9,7 @@ public class Dog extends Animal{
     private int legs;
 
 
-    public Dog(String name, int size, int weight, int eyes, int tails, int legs) {
+    protected Dog(String name, int size, int weight, int eyes, int tails, int legs) {
         super(name, 1, size, weight, 1);
         this.eyes=eyes;
         this.tails=tails;
@@ -17,40 +17,40 @@ public class Dog extends Animal{
     }
 
     @Override
-    public void eat() {
+    protected void eat() {
         super.eat();
         LOGGER.info("dog is eating");
 
     }
 
     @Override
-    public void move(int speed) {
+    protected void move(int speed) {
 
        LOGGER.info("dog is moving " +speed+ "km. speed");
         super.move(speed+5);
     }
 
-    public int getEyes() {
+    protected int getEyes() {
         return eyes;
     }
 
-    public void setEyes(final int eyes) {
+    protected void setEyes(final int eyes) {
         this.eyes = eyes;
     }
 
-    public int getTails() {
+    protected int getTails() {
         return tails;
     }
 
-    public void setTails(final int tails) {
+    protected void setTails(final int tails) {
         this.tails = tails;
     }
 
-    public int getLegs() {
+    protected int getLegs() {
         return legs;
     }
 
-    public void setLegs(final int legs) {
+    protected void setLegs(final int legs) {
         this.legs = legs;
     }
 }
