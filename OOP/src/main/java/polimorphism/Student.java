@@ -1,4 +1,4 @@
-package polymorphism;
+package polimorphism;
 
 public abstract class Student {
 

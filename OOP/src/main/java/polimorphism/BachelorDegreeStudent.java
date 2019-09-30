@@ -1,4 +1,4 @@
-package polymorphism;
+package polimorphism;
 import org.apache.log4j.Logger;
 
 public class BachelorDegreeStudent extends Student {

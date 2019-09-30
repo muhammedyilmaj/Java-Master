@@ -1,6 +1,6 @@
 package references_object_instance;
 
-import inheritance.Dog;
+import references_object_instance.Dog;
 
 public class Main {
 

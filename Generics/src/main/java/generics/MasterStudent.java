@@ -1,4 +1,4 @@
-package polymorphism;
+package generics;
 
 import org.apache.log4j.Logger;
 
