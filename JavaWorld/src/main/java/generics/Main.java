@@ -27,7 +27,7 @@ public class Main {
         Set<Student> bachelorStudent= new HashSet<>();
         Collections.addAll(bachelorStudent,James, Ronaldo,Falcao);
         Collections.addAll(masterStudent,gokhan,badri,tyron);
-        bachelorTeacher.addStudent((BachelorDegreeStudent) James);
+        bachelorTeacher.addStudent(James);
         bachelorTeacher.setStudents(bachelorStudent);
 
         masterTeacher.setStudents(masterStudent);
