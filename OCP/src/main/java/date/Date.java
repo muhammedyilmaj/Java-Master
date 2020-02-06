@@ -13,7 +13,7 @@ public class Date {
         LocalDate localDate = LocalDate.of(2019,2,2);
         localDate=localDate.plusWeeks(2);
         LocalTime localTime=  LocalTime.now();
-        System.out.println(localDate.toString());
+        System.out.println(localDate);
         localDate.plusWeeks(2);
         System.out.println(localDate);
         LocalDateTime localDateTime= LocalDateTime.of(localDate,localTime).minusDays(1).minusHours(12).minusSeconds(12);
