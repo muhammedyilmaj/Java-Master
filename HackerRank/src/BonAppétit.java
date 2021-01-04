@@ -4,19 +4,19 @@ import java.util.List;
 public class BonAppétit {
 
     static void bonAppetit(List<Integer> bill, int k, int b) {
-        int totalamount=0;
-        int totalamountwithoutanna=0;
+        int totalAmount=0;
+        int totalAmountWithoutAnna=0;
         for(int i=0;i<bill.size();i++){
-            totalamount+=bill.get(i);
+            totalAmount+=bill.get(i);
             if(i!=k){
-                totalamountwithoutanna+=bill.get(i);
+                totalAmountWithoutAnna+=bill.get(i);
             }
         }
-        if(totalamountwithoutanna/2==b){
+        if(totalAmountWithoutAnna/2==b){
             System.out.println("Bon Appetit");
         }
         else {
-            System.out.println(totalamount/2-totalamountwithoutanna/2);
+            System.out.println(totalAmount/2-totalAmountWithoutAnna/2);
         }
 
 

@@ -2,7 +2,7 @@ package generics;
 
 public abstract class Student {
 
-    private int    studentNumber;
+    private int studentNumber;
     private String studentName;
     private String schoolName;
     private String projectTopic;
