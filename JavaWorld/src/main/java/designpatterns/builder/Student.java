@@ -1,4 +1,4 @@
-package designpatterns;
+package designpatterns.builder;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,12 +12,12 @@ public class Student {
     private String phone;
 
     public Student (StudentBuilder builder) {
-        name = builder.name;
-        surName = builder.surName;
-        Id = builder.Id;
-        lessons = builder.lessons;
-        school = builder.school;
-        phone = builder.phone;
+        this.name = builder.name;
+        this.surName = builder.surName;
+        this.Id = builder.Id;
+        this.lessons = builder.lessons;
+        this.school = builder.school;
+        this.phone = builder.phone;
     }
 
     public String getName() {
