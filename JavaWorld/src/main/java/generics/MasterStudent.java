@@ -2,13 +2,14 @@ package generics;
 
 import org.apache.log4j.Logger;
 
+import java.util.EnumSet;
+
 public class MasterStudent extends Student{
     private static final Logger LOGGER = Logger.getLogger(MasterStudent.class);
-
+    private static String sttring = "";
     public MasterStudent(final int studentNumber, final String studentName, final String schoolName) {
         super(studentNumber, studentName, schoolName, "master");
     }
-
     @Override
     protected void selectLecturerName( String name) {
         if (this.getRole().equals("teacher")) {
